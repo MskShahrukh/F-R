@@ -1,0 +1,87 @@
+
+
+### Find a single product by id
+# query {
+#   product(_id: "6694ab9242c517cb29eeedc1") {
+#       vintage
+#       name
+#       producer{
+#         name
+#         region
+#         country
+#       }
+#   }
+# }
+
+
+### Find products by producerId
+# query {
+#   products(_producerId: "6694ab8e42c517cb29eedb9c") {
+#       vintage
+#       name
+#       producer{
+#         name
+#         region
+#         country
+#       }
+#   }
+# }
+
+### Delete multiple products with id
+# mutation {
+#   deleteProducts(_ids: [
+#     "6694ab9242c517cb29eeedc1",
+#     "6691d7e7fb458e2463d29c7a", 
+#     "6691d7e7fb458e2463d29c78"
+#   ])
+# }
+
+
+# # ### Update a single product with id
+# mutation {
+#   updateProduct(
+#     _id:"669495d742c517cb298594fc", 
+#     input: {
+#       name: "best drink - no name"
+#       vintage: "1111"
+#       producerId: "6694958442c517cb2983de42"
+#     }
+#   ){
+#       name
+#       vintage
+#       producer{
+#         name
+#         region
+#         country
+#       }
+#   }
+# }
+
+### Create multiple products
+# mutation {
+#   createProducts(
+#     input: [{
+#       name: "product - B"
+#       vintage: "1999"
+#       producerId: "6694ab8e42c517cb29eedb9e"
+#     }, {
+#       name: "product - C"
+#       vintage: "1998"
+#       producerId: "6694ab8e42c517cb29eedb9e"
+#     }
+#     ]
+#   ){
+#       name
+#       vintage
+#       producer{
+#         name
+#         region
+#         country
+#       }
+#   }
+# }
+
+### Fetch products from CSV and save to DB.
+# mutation {
+#   fetchProducts(_url: "https://api.frw.co.uk/feeds/all_listings.csv")
+# }

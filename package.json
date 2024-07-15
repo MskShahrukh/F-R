@@ -1,0 +1,32 @@
+{
+  "name": "fine-and-rare-test",
+  "version": "1.0.0",
+  "description": "This is a simple test project showcasing express, mongodb, mongooes and graphql",
+  "main": "index.ts",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon index.ts"
+  },
+  "author": "mskshahrukh",
+  "license": "ISC",
+  "dependencies": {
+    "csv": "^6.3.9",
+    "csv-parse": "^5.5.6",
+    "csv-parser": "^3.0.0",
+    "csvtojson": "^2.0.10",
+    "express": "^4.19.2",
+    "graphql": "^16.9.0",
+    "graphql-http": "^1.22.1",
+    "graphql-playground-middleware-express": "^1.7.23",
+    "mongoose": "^8.5.1",
+    "parse-csv-stream": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.10",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.3",
+    "typescript": "^5.5.3"
+  }
+}
