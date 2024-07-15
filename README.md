@@ -18,3 +18,11 @@ GraphQL playground at http://localhost:3000/playground
 ```
 
 There is a playground-helper.txt file which you can paste in the playground to speed up your testing.
+
+IMPORTANT: Check the `fetchProducts` mutation in this helper file, we are passing URL for external file (csv) in the mutation.
+
+```
+mutation {
+  fetchProducts(_url: "https://api.frw.co.uk/feeds/all_listings.csv")
+}
+```
